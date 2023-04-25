@@ -1,0 +1,913 @@
+# Playlist: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23
+## Video One
+'''
+name = "Shreya"
+print(name)
+
+for i in range(1,8):
+    print(i)
+    
+list = list(range(5))
+ for i in list:
+    print(i)
+    print(i*2)
+    print()
+print(name)
+
+nums = [1,5,2,4,6,10,3]
+for num in nums:
+    if num%2==0:
+        print(num, "is EVEN")
+    else:
+        print(num, "is ODD")
+nums = [1,-5,2,-4,0,6,-10,3]
+for num in nums:
+    if num > 0:
+        print("positive")
+    elif num < 0:
+        print("negative")
+    else:
+        print("zero")
+def even(x):
+    return x % 2 == 0
+
+def odd(x):
+    return x % 2 != 0
+
+for row in range(5):
+    for col in range(5):
+        print(col,end='')
+    print()
+
+for x in range(1,11):
+    for y in range(1,x+1):
+        print('{:3}'.format(y), end='')
+    print()
+
+def firstProgram():
+    name = input("Enter name: ")
+    print("Hello " + name + " nice to meet you!")
+firstProgram()
+
+def firstProgram():
+    name = input("Enter name: ")
+    print("Hello {} nice to meet you!".format(name))
+firstProgram()
+'''
+
+
+## Video Two
+'''
+count = int(input("Enter a number: "))
+print("Ready?")
+while count >= 0:
+    print(count)
+    count -= 1
+print("Blastoff!!!")
+
+nums = [1,-5,2,-4,0,6,-10,3]
+pos = []
+neg = []
+
+for x in nums:
+    if x > 0:
+        pos.append(x)
+    if x < 0:
+        neg.append(x)
+print(pos)
+print(neg)
+
+nums = [1,-5,2,-4,0,6,-10,3]
+pos = [i for i in range(10) if i > 0]
+
+nums = [1,-5,2,-4,0,6,-10,3]
+list_numbers = []
+for i in range(5):
+    list_numbers.append(list(range(1,6)))
+
+numbers = [random.randint(1,5) for i in range(10)]
+
+import random
+numbers = [i for i in range(1,26)]
+random.shuffle(numbers)
+
+shuffled = [7, 11, 20, 9, 22,
+            15, 25, 10, 2, 19,
+            14, 17, 21, 12, 1,
+            16, 3, 13, 4, 18,
+            23, 8, 24, 5, 6]
+horses = [[],
+          [],
+          [],
+          [],
+          []
+    ]
+for i in range(5):
+    for j in range(5):
+        horses[j].append(shuffled.pop())
+
+
+horses = [[6, 18, 1, 19, 22],
+          [5, 4, 12, 2, 9],
+          [24, 13, 21, 10, 20],
+          [8, 3, 17, 25, 11],
+          [23, 16, 14, 15, 7]]
+
+for race in horses:
+    race.sort()
+
+for race in horses:
+    print(race)
+
+def last(x):
+    return x[-1]
+print()
+new_horses = sorted(horses, key=last, reverse=True)
+for race in new_horses:
+    print(race)
+'''
+
+
+## Video Three
+'''
+def time_table():
+    while True:
+        try: 
+            x = int(input("Enter a number: "))
+            for row in range(x+1):
+                for col in range (x+1):
+                    print(f"{row*col:3}", end=" ")
+                print()
+        except ValueError:
+            print("Please enter a NUMBER.")
+        question = input("Do you want another table? (y/n)").lower()
+        if question[0] == "n":
+            break
+time_table()
+
+def is_prime(num):
+    for i in range(2,num):
+        if num % i == 0:
+            return False
+    return True
+test = [3,6,11,31]
+for nums in test:
+    print(f"{nums} is a prime number {is_prime(nums)}")
+    
+def nth_prime(x):
+    num = 3
+    prime = 2
+    if x == 1:
+        return 2
+    while prime < x:
+        num += 2
+        if is_prime(num):
+            prime += 1
+    return num
+
+prime = [i for i in range(2, 101) if is_prime(i)]
+
+import random
+while True:
+    number = random.randint(1,20)
+    print(number)
+    try:
+        guess = int(input("Enter a guess: "))
+        while guess != number:
+            if guess > number:
+                print("Guess a smaller number.")
+                guess = int(input("Enter a guess: "))
+            else:
+                print("Guess a larger number.")
+                guess = int(input("Enter a guess: "))
+        else:
+            print("You guessed the correct number.")
+            
+    except ValueError:
+        print("Enter a number.")
+        
+    question = input("Do you want to play again? (y/n)").lower()
+    if question[0] == "n":
+        break
+
+# leap years are years divisible by 4, but even century has to be divisible by 4, 100, 400
+years = [1992,1600,1900,2002,2020]
+def leap_year(x):
+    if x % 4 == 0:
+        if x % 100 == 0:
+            if x % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+for year in years:
+    print(year, leap_year(year))
+
+for i in range(len(names)):
+    print(i+1, names[i])
+names = ["Sam","Tom","Steve"]
+for number, name in enumerate(names,start=1):
+    print(number, name)
+'''
+
+
+## Video Four
+'''
+sentence = "Hi My Name Is Fuyumi"
+spaces = sentence.split()
+sentence_comma = "Hi,My,Name,Is,Touya"
+commas = sentence_comma.split(",")
+
+name = input("Enter names using commas: ").split(",")
+names = [i.strip() for i in name]
+print(names)
+
+x = "abcaafahbaabdfgz"
+sub = x[0]
+long, length = sub, 1
+for letter in x[1:]:
+    if ord(sub[-1]) <= ord(letter):
+        sub += letter
+        if len(sub) > len(long):
+            lenght = len(sub)
+            long = sub
+            print(long)
+    else:
+        sub = letter
+#        print(letter)
+print(long)
+
+dad = "dadaddadaadada"
+count, place = 0, 0
+while dad.find("dad", place) >= 0:
+    place = dad.find("dad", place) + 1
+    count += 1
+print(count)
+
+from string import ascii_lowercase as lower
+x = "abcaafahbaabdfgz"
+abc = ""
+abc = "*".join(lower)
+
+import re
+abc = "a*b*c*d*e*f*g*h*i*j*k*l*m*n*o*p*q*r*s*t*u*v*w*x*y*z*"
+x = "abcaafahbaabdfgz"
+pat = re.compile(abc)
+print(max(pat.findall(x),key=len))
+
+answer = False
+low = 0
+high = 100
+input("Think of a number between 1 and 100. Then hit enter to continue.")
+while not answer:
+    guess = (high - low) // 2 + low
+    print(f"Is your number: {guess}?")
+    response = input("""Enter 'h' to indicate the guess is too high.
+Enter 'l' to indicate the guess is too low.
+Enter 'c' to indicate the guess is correct.
+Enter Answer: """).lower()
+    if response == "h":
+        high = guess
+    elif response == "l":
+        low = guess
+    elif response == "c":
+        answer = True
+        print("Thanks for playing with me!")
+
+answer = False
+low = 0
+high = 100
+input("Think of a number between 1 and 100. Then hit enter to continue.")
+while not answer:
+    guess = (high + low) // 2 #or (high - low) // 2 + low
+    print(f"Is your number: {guess}?")
+    response = input("""Enter 'h' to indicate the guess is too high.
+Enter 'l' to indicate the guess is too low.
+Enter 'c' to indicate the guess is correct.
+Enter Answer: """).lower()
+    if response == "h":
+        high = guess
+    elif response == "l":
+        low = guess
+    elif response == "c":
+        answer = True
+        print("Thanks for playing with me!")
+        
+import re
+dad = "dadaddadaadada"
+# found = re.findall(r"(?=(\w))",dad) finds all the letters and puts them in a list
+# found = re.findall(r"(?=(\w\w))",dad) is every two letters
+found = re.findall(r"(?=(\w\w\w))",dad)
+count = [x for x in found if x == "dad"]
+print(len(count))
+'''
+
+
+## Video Five
+'''
+def factorial(x):
+    total = 1
+    while x > 0:
+        total *= x
+        x -= 1
+    print(total)
+
+def factorial(x):
+    if x > -1:
+        if x == 0:
+            return 1
+        else:
+            return x  * factorial(x-1)
+    else:
+        return "Negative"
+tests = [3,4,1,0,-2,8,12,18,100]
+for test in tests:
+    print(factorial(test))
+
+def odds(balls,pick,power=False):
+    """Enter number a regular balls, number of balls
+picked, and if they are using a powerball, you will be asked
+for the number of powerballs"""
+    from math import factorial as fact
+    p_ball = 1
+    if power:
+        p_ball = int(input("Enter the number of powerballs: "))
+    return (fact(balls))//(fact(5)*fact(balls-pick))*p_ball
+print("{:,}".format(odds(69,6)))
+#or to print commas with f-string, do print(f"{odds(69,6):,}")
+
+d = {}
+d["Tobio"] = 16
+fruits = {"bananasc":3, "apple": 1, "grapes": 2}
+##print(fruits.keys())
+##print(fruits.values())
+##print(fruits.items())
+for k,v in fruits.items():
+    print(f"I have {v} {k}")
+'''
+
+
+## Video Six
+'''
+from string import ascii_lowercase as lower
+
+key = {}
+for i in range(len(lower)):
+    key[lower[i]] = 1+i
+    
+letters = lower
+nums = list(range(1,27))
+#or
+from string import ascii_lowercase as lower
+key = dict(zip(lower,list(range(1,27))))
+
+file = "any text box or something i don't even know"
+file = file.split()
+book = {}
+for word in file:
+    if word not in book:
+        book[word] = 1
+    else:
+        book[word] += 1
+
+def phone_number():
+    x = input("Enter your phone number: ")
+    print(f"({x[:3]}){x[3:6]}-{x[6:]}")
+
+students = ["touya", "fuyumi", "natuso", "shoto"]
+s_dict = {student[0].upper(): student for student in students}
+print(s_dict)
+
+# local (nonloal) global built-in
+from math import pi
+pi = 3.14
+def area(r):
+    global = pi
+    pi = 3.14159
+    return pi*r*2
+print(area(3))
+
+def exp(n):
+    n = 1
+    def num(x):
+        nonlocal n
+        return x**n
+    return num
+
+square = exp(2)
+cube = exp(3)
+
+def cube(func):
+    def wrapper(arg):
+        return func(arg)**3
+    return wrapper
+@cube
+def num(x):
+    return x
+
+def upper(func):
+    def wrapper():
+        return func().upper()
+    return wrapper
+@upper
+def hi():
+    return "Hi how are you?"
+
+from random import shuffle, choice
+def game(x,change=False):
+    doors = ["goat", "goat", "car"]
+    shuffle(doors)
+    wins,losses = 0,0
+    def no_switch():
+        nonlocal wins,losses
+        if "car" == choice(doors):
+            wins += 1
+        else:
+            losses += 1
+    def switch():
+        door = ["goat", "goat", "car"]
+        nonlocal wins,losses
+        door.pop(choice(range(3)))
+        door.remove("goat")
+        second_choice = door[0]
+        if second_choice == "car":
+            wins += 1
+        else:
+            losses += 1
+    for i in range(x):
+        if change:
+            switch()
+        else:
+            no_switch()
+    print(f"wins: {wins} percent wins: ({wins/x})")
+    print(f"losses: {losses} percent losses: {(losses/x)}")
+game(10000)
+print()
+game(10000,True)
+
+import urllib.request as url
+page = url.urlopen("http://www.textfiles.com.etext/AUTHOR/POE/poe-raven-702.txt")
+text = page.read()
+text = text.decode()
+page.close()
+file = open("raven.txt", "w")
+file.write(text)
+file.close()
+
+file = file.split()
+book = {}
+for word in file:
+    if word not in book:
+        book[word] = 1
+    else:
+        book[word] += 1
+def last(x):
+    return x[-1]
+book = book.items()
+sort_book = sorted(book,key=last,reverse=True)
+for i in sort_book[:10]:
+    print(i[0], ":", i[1])
+'''
+
+
+## Video Seven
+'''
+f = open("test_1.txt", "w")
+f.write("HI BIRDIE!!!")
+f.close()
+f = open("test_1.txt")
+print(f.read())
+f.close
+
+with open("test_1.txt") as f:
+    print(f.read())
+
+def my_list():
+    while True:
+        with open("shopping_list.txt", "a+") as file:
+            print(""" type anytime
+Exit: to quit
+List: to read and delete""")
+            item = input("Enter an item: ")
+            if item == "EXIT":
+                break
+            elif item == "LIST":
+                file.seek(0)
+                items = list(enumerate(file.read().split(),1))
+                for count,item in items:
+                    print(f"{count:3d}) {item}")
+                while True:
+                    try:
+                        remove = int(input("Enter number to delete or 0 to continue: "))
+                        if remove == 0:
+                            break
+                        else:
+                            del items[remove - 1]
+                            with open("shopping_list.txt", "w") as file:
+                                for item in items:
+                                    file.write(item[1] + "\n")
+                    except ValueError:
+                        print("If you don't want to delete please enter 0")
+            else:
+                file.write(item + "\n")
+my_list()
+'''
+
+    
+## Video Eight
+'''
+def my_list():
+    while True:
+        with open("shopping_list.txt", "a+") as file:
+            print("""Type Anytime ---
+EXIT: to quit
+LIST: to read and delete""")
+            item = input("Enter an item: ")
+            if item == "EXIT":
+                break
+            elif item == "LIST":
+                file.seek(0)
+                items = list(enumerate(file.read().split(),1))
+                for count,item in items:
+                    print(f"{count:3d}) {item}")
+                while True:
+                    try:
+                        remove = int(input("Enter number to delete or 0 to continue: "))
+                        if remove == 0:
+                            break
+                        else:
+                            del items[remove - 1]
+                            with open("shopping_list.txt", "w+") as file:
+                                for item in items:
+                                    file.write(item[1] + "\n")
+                                file.seek(0)
+                                items = list(enumerate(file.read().split(),1))
+                                for count,item in items:
+                                    print(f"{count:3d}) {item}")
+                    except ValueError:
+                        print("If you don't want to delete please enter 0")
+            else:
+                file.write(item + "\n")
+my_list()                   
+
+class rect():
+    
+    def __init__(self,length, width):
+        self.length = length
+        self.width = width
+
+    def __repr__(self):
+        return "rect({self.length},{self.width})".format(self=self)
+
+    def __str__(self):
+        return f"Your rectangle is {self.width} by {self.length}"
+
+    def peri(self):
+        print(2*self.width*self.length)
+
+    def area(self):
+        print(self.width*self.length)
+
+class Dog():
+    species = "Canine"
+    voice = "Bark"
+
+class poodle(Dog):
+    pass
+
+name = iter("Keigo")
+
+## for i in name:
+##    print(i)
+
+def series(num):
+    n = 0
+    while n < num:
+        yield n
+        n += 1
+five = series(5)
+
+def fives(x):
+    if x % 5 == 4:
+        x += 1
+    elif x % 5 == 3:
+        x += 2
+    print(x)
+    
+def fives(x):
+    if x % 5 == 3 or x % 5 == 4:
+        x += (5 - x % 5)
+    print(x)
+
+grades = [72,98,94,83,71,73,100]
+for grade in grades:
+    print(grade, end = " "), fives(grade)
+'''
+
+
+## Video Nine
+'''
+x = ["sam",41,"bob",36,"steve","20"]
+name = [True for i in x if str(i),isnumeric()]
+name = [False if str(i),isnumeric() else True for i in x]
+
+from string import ascii_uppercase as letters
+from random import choice
+
+a_f = list(letters[:6])
+num = iter(range(1,7))
+hidden = [choice(a_f) + str(choice(list(range(1,7)))) for i in range(4)]
+arr = [["O" for i in range(6)] for i in range(6)]
+while True:
+    num = iter(range(1,7))
+    print(hidden)
+    print(f"Find the {len(hidden)} hidden X's")
+    print(" " + " ".join(a_f))
+    for i in arr:
+        print(next(num),end=" ")
+        print(" ".join(i))
+    move = input(""" Q to Quit
+Enter move (eg. A5): """)
+    if move[0].lower() == "q":
+        break
+    else:
+        if move in hidden:
+            hidden.pop(hidden.index(move))
+            move = list(move)
+            arr[int(move[1])-1][a_f.index(move[0])] = "X"
+        else:
+            move = list(move)
+            arr[int(move[1])-1][a_f.index(move[0])] = " "
+'''
+
+
+## Video Ten
+'''
+t,n,s = 20,9,6
+def nuggets(ttl):
+    global x
+    x = {}
+    for i in range(10):
+        for j in range(10):
+            for k in range(10):
+                tot = i*t+j*n+k*s
+                x[tot] = [i,j,k]
+                if ttl == tot:
+                    break
+            if ttl == tot:
+                break
+        if ttl == tot:
+            break
+    print(f"""{ttl}
+{x[ttl][2]}: 6 piece
+{x[ttl][1]}: 9 piece
+{x[ttl][0]}: 20 piece""")
+
+comb = []
+for i in range(101):
+    try:
+        nuggets(i)
+        comb.append(i)
+    except:
+        print(i, "no results")
+
+from itertools import chain
+x = "abc"
+y = "def"
+z = "ghi"
+arr = [x,y,z]
+for i in change.from_iterable(arr):
+    print(i)
+for i in chain(x,y,z):
+    print(i)
+
+|from itertools import combinations as comb
+letter = "ABCDEFG"
+x = comb(letter,3)
+y = ["".join(i) for i in x]
+
+from itertools import count
+
+x = count(1)
+
+from itertools import count
+start = count(1,2)
+num = count(1)
+
+for i in range(1,4):
+    print((" ")*(3-i), end="")
+    for j in range(next(start)):
+        print(next(num), end="")
+    print()
+'''
+
+
+## Video Eleven
+'''
+win.configure(width=300,height=300,background="red")
+
+label = tk.label(win.text="Hello World")
+button = ttk.Button(win,text="Hello")
+label.pack()
+button.pack()
+
+win.geometry("300x300+200+200")
+
+import tkinter as tk
+import tkinter.ttk as ttk
+win = tk.Tk()
+win.title("Calculator")
+
+expr = ""
+text = tk.StringVar()
+
+def press(num):
+    global expr
+    expr += str(num)
+    text.set(expr)
+
+def clr():
+    global expr
+    expr = ""
+    text.set(expr)
+
+def equal():
+    global expr
+    ttl = str(eval(expr))
+    text.set(ttl)
+
+entry = ttk.Entry(win,justify="right",textvariable=text)
+entry.grid(row=0,columnspan=4,sticky="nsew")
+
+button_7 = ttk.Button(win,text="7",command=lambda:press(7))
+button_7.grid(row=1,column=0)
+button_8 = ttk.Button(win,text="8",command=lambda:press(8))
+button_8.grid(row=1,column=1)
+button_9 = ttk.Button(win,text="9",command=lambda:press(9))
+button_9.grid(row=1,column=2)
+button_d = ttk.Button(win,text="/",command=lambda:press("/"))
+button_d.grid(row=1,column=3)
+
+button_4 = ttk.Button(win,text="4",command=lambda:press(4))
+button_4.grid(row=2,column=0)
+button_5 = ttk.Button(win,text="5",command=lambda:press(5))
+button_5.grid(row=2,column=1)
+button_6 = ttk.Button(win,text="6",command=lambda:press(6))
+button_6.grid(row=2,column=2)
+button_m = ttk.Button(win,text="*",command=lambda:press("*"))
+button_m.grid(row=2,column=3)
+
+button_1 = ttk.Button(win,text="1",command=lambda:press(1))
+button_1.grid(row=3,column=0)
+button_2 = ttk.Button(win,text="2",command=lambda:press(2))
+button_2.grid(row=3,column=1)
+button_3 = ttk.Button(win,text="3",command=lambda:press(3))
+button_3.grid(row=3,column=2)
+button_s = ttk.Button(win,text="-",command=lambda:press("-"))
+button_s.grid(row=3,column=3)
+
+button_0 = ttk.Button(win,text="0",command=lambda:press(0))
+button_0.grid(row=4,column=0)
+button_dot = ttk.Button(win,text=".",command=lambda:press("."))
+button_dot.grid(row=4,column=1)
+button_c = ttk.Button(win,text="c",command=clr)
+button_c.grid(row=4,column=2)
+button_a = ttk.Button(win,text="+",command=lambda:press("+"))
+button_a.grid(row=4,column=3)
+
+button_e = ttk.Button(win,text="=",command=equal)
+button_e.grid(row=5,columnspan=4,sticky="nsew")
+
+win.mainloop()
+'''
+
+
+## Video Twelve
+'''
+import random, string
+
+def password(length,num=False,strength="weak"):
+    """ length of password, num if you want a number,
+    and strength(weak, strong, very) """
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    letter = lower + upper
+    dig = string.digits
+    punct = string.punctuation
+    pwd = ""
+    if strength == "weak":
+        if num:
+            length -= 2
+            for i in range(2):
+                pwd += random.choice(dig)
+        for i in range(length):
+            pwd += random.choice(lower)
+    elif strength == "strong":
+        if num:
+            length -= 2
+            for i in range(2):
+                pwd += random.choice(dig)
+        for i in range(length):
+            pwd += random.choice(letter)
+    elif strength == "very":
+        ran = random.randint(2,4)
+        if num:
+            length -= ran
+            for i in range(ran):
+                pwd += random.choice(dig)
+        length -= ran
+        for i in range(ran):
+            pwd += random.choice(punct)
+        for i in range(length):
+            pwd += random.choice(letter)
+
+    pwd = list(pwd)
+    random.shuffle(pwd)
+    return "".join(pwd)
+
+
+print(password(5,num=True))
+print(password(10,num=True,strength="strong"))
+print(password(15,num=True,strength="very"))
+
+student = ["denji", "aki", "power", "makima"]
+grade = [6,7,7,8]
+classes = list(zip(student,grade))
+new_students,grades = zip(*classes)
+
+x = "help"
+x.center(10,"#")
+
+x = ["denji", 31, "aki", 46, "power", 24]
+name = [False if str(i).isnumeric() else True for i in x]
+
+for i in x:
+    print(i)
+'''
+
+ 
+## Video Thirteen
+'''
+def sec(x):
+    d = x//86400
+    h = (x%86400)//3600
+    m = (x%3600)//60
+    s = (x%60)
+    print(F"{d}:{h}:{m}:{s}")
+
+print("d:h:m:s")
+sec(4852305)
+
+import time
+f_name = time.asctime().replace(" ","_")+".pkl"
+f_name = f_name.replace(":","_")
+#f_name_2 = f_name.replace(" ","_")
+
+import glob
+files = glob.glob(".py")
+print(files)
+
+x = sorted([1,43,5,27,19,4],reverse=True)
+'''
+
+
+## Video Fourteen
+'''
+import random
+def doorgame():
+    life = 5
+    while life > 0:
+        door = random.randint(1,5)
+        print("Door:", door) #for debugging
+        print("Life:", life)
+        life -= 1
+        guess = int(input("Enter a guess of door: ")) 
+        if guess != door:
+            if life > 0: 
+                print("Guess Again!")
+                continue
+            else:
+                print("You lose all of your life. The correct door was " + str(door))
+        else:
+            print("Well done, your managed to escape!")
+        print("Do you want to play again?")
+        q = input("Yes or No?: ").lower()[0]
+        if q == "y":
+            life = 5
+        else:
+            life = 0
+    else:
+        print("Game Over\nThank You For Playing!!!")
+doorgame()
+
+file = "thur Nov 28 2020 18:16:16".replace(" ","_").replace(":","_")
+
+import re
+file = "thur Nov 28 2020 18:16:16"
+file = re.sub("[ :]","_",file)
+
+file = re.sub("[ :]","_",file)
+'''

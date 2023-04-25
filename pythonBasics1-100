@@ -1,0 +1,1206 @@
+## Playlist = https://www.youtube.com/playlist?list=PLaYT64KWZAENJpyfu7y4sAhSBAGj9W53f
+
+## Episode One
+'''
+name = "Iwaizumi Hajime"
+print(name)
+
+for letter in name:
+    print(letter)
+'''
+
+
+## Episode Two
+'''
+age = 16
+age += 1
+print(age)
+age -= 1
+print(age)
+age *= 2
+print(age)
+age //= 2
+print(type(age))
+'''
+
+
+## Episode Three
+'''
+number = 4
+print(type(number))
+number = 4.0
+print(type(number))
+'''
+
+
+## Episode Four
+'''
+def hello():
+    x = input("Enter name: ")
+    print(x)
+
+hello()
+'''
+
+
+## Episode Five
+'''
+for number in range(10): #0 to 0
+    print(number)
+for number in range(1,11): #1 to 10
+    print(number)
+for number in range(2,11,2): #even from 2 to 10
+    print(number)
+'''
+
+
+## Episode Six
+'''
+name = "Python Basics"
+name[0] #p
+name[1] #y
+name[1:5] #ytho
+name[:5] # Pytho
+name[13] #error
+name[:12] #Python Basic
+name[:13] #Python Basics
+'''
+
+
+## Episode Seven
+'''
+name = "Python Basics"
+name[1:] #ython Basics
+name[::2] #every other letter
+name[:] #full string
+
+for letter in name:
+    print(letter)
+first = "Python"
+last = "Basics"
+word = first + " " + last
+'''
+
+
+## Episode Eight
+'''
+new = []
+new.append(1)
+new.append(2)
+new.append(8)
+new.append("Fish")
+del new[3]
+old = [43,65,76]
+news = new + old
+new[0] = "Sam"
+new[0] = new[0] + "e"
+#new = new + old
+'''
+
+
+## Episode Nine
+'''
+def name(x):
+    print(x)
+
+def name():
+    x = input("Enter your name: ")
+    print(x)
+'''
+
+
+## Episode Ten
+'''
+new = []
+new.append("Sakusa Kiyoomi")
+new.append("Miya Atsumu")
+new.append("Miya Osamu")
+new.append("Suna Rintaro")
+for name in new:
+    print(f"Hi {name} nice to meet you.")
+'''
+
+
+## Episode Eleven
+'''
+for i in range(5):
+    print(i)
+for i in range(5):
+    print(i, end="")
+for i in range(5):
+    print(i, end=" ")
+for i in range(5):
+    for j in range(i):
+        print(j, end="")
+    print()  
+'''
+
+
+## Episode Twelve
+'''
+def new_line():
+    print()
+
+def three line:
+    new_line()
+    new_line()
+    new_line()
+
+def nine_line():
+    three_line()
+    three_line()
+    three_line()
+'''
+
+
+## Episode Thirteen
+'''
+5 > 8
+5 < 8
+5 <=8
+5 >- 8
+5 == 8
+5 !- 8
+'''
+
+
+## Episode Fourteen
+'''
+if 5 < 8:
+    print("x")
+else:
+    print("y")
+'''
+
+
+## Episode Fifteen
+'''
+def num(x):
+    if x > 0:
+        print("Positive")
+    elif x < 0:
+        print("Negative")
+    else:
+        print("Zero")
+'''
+
+
+
+## Episode Sixteen 
+'''
+def num(x):
+    return x
+
+def word(string):
+    return string
+
+def word_ed(string):
+    return string + "ed"
+'''
+
+
+## Episode Seventeen
+'''
+grade = 100
+if grade > 89:
+    print("A")
+elif grade > 79:
+    print("B")
+elif grade > 69:
+    print("C")
+elif grade > 59:
+    print("D")
+else:
+    print("F")
+'''
+
+
+## Episode Eighteen 
+'''
+def is_divisor(num,div):
+    "Enter number then divisor"
+    if num % div == 0:
+        print(f"{num} is a divisor of {div}")
+    else:
+        print(f"{num} is not a divisor of {div}")
+'''
+
+
+## Episode Nineteen
+'''
+num = list(range(5))
+num.reverse()
+
+name = list("Todoroki")
+name.sort()
+'''
+
+
+## Episode Twenty 
+'''
+name = "Aizawa Shouta"
+print(name.islower())
+name = name.lower()
+print(name.islower())
+name.upper().isupper()
+'''
+
+
+## Episode Twenty-One
+'''
+# * means that there are multiple, unknown number of arguments being passed
+def arguments(*nums):
+    for num in nums:
+        print(num)
+'''
+
+
+## Episode Twenty-Two
+'''
+def even(x):
+    if x % 2 == 0:
+        print (x, "is even")
+    else:
+        print(x, "is odd")
+'''
+
+
+## Episode Twenty-Three
+'''
+x = 4
+while x > 0:
+    print(x)
+    x -= 1
+'''
+
+
+## Episode Twenty-Four
+'''
+"a" in "abcd"
+"b" in "aeiou"
+"b" not in "aeiou"
+'''
+
+
+## Episode Twenty-Five
+'''
+from keyword import kwlist as kw
+'''
+
+
+## Episode Twenty-Six
+'''
+count = 0
+count += 3
+count -= 1
+count *= 2
+count /= 3
+'''
+
+
+## Episode Twenty-Seven
+'''
+s = "abcdefg"
+vowels = "aeiou"
+s[0]
+new = ''
+for i in s:
+    if i not in vowels:
+        new += i
+print(new)
+'''
+
+
+
+## Episode Twenty-Eight
+'''
+for row in range(1,11):
+    for col in range(1,row+1):
+        print(col, end = "")
+    print()
+'''
+
+
+## Episode Twenty-Nine
+'''
+name = "Bakugou Katsuki"
+age = 16
+# name + age is not possible
+name = name + str(age)
+'''
+
+
+## Episode Thirty
+'''
+print("Name's Bakugou Katsuki.")
+print("Hey,\nBakugou Katsuki here.")
+print("Hey,\nBakugou Katsuki here.", end = " ")
+print("What?")
+print("""What
+Do
+You
+Want""")
+'''
+
+
+### Episode Thirty-One
+'''
+y = "A Court of Silver Flames".split() #sort()
+
+x = list("A Court Of Starlight and Frost")
+for i in x:
+    print(i.title())
+'''
+
+
+## Episode Thirty-Two
+'''
+new = []
+for i in range(10):
+    if i % 2 == 0:
+        new.append(i)
+
+new = [i for i in range(10) if i % 2 == 0]
+
+new = [i*2 for i in range(10) if i % 2 == 0]
+'''
+
+
+## Episode Thirty-Three
+'''
+pal = "tacocat"
+n_pal = "TouyaT"
+pal[::-1] #reverse string
+n_pal[::-1]
+'''
+
+
+## Episode Thirty-Four
+'''
+pal = "tacocat"
+n_pal = "TouyaT"
+
+def palindrome(x):
+    return x.lower() == x[::-1].lower()
+'''
+
+
+## Episode Thirty-Five
+'''
+def prime(x):
+    d = []
+    for i in range (2,x):
+        if x % i == 0:
+            d.append(i)
+
+    if len(d) > 0:
+        print(x, "is not a prime number.")
+    else:
+        print(x, "is a prime number.")
+'''
+    
+
+## Episode Thirty-Six
+'''
+def prime():
+    x = int(input("Enter a number: "))
+    for i in range(2,x):
+        if x % i == 0:
+            print(x, "is not a prime number.")
+            break
+    else:
+        print(x, "is a prime number.")
+
+def prime():
+    x = int(input("Enter a number: "))
+    for i in range(2,x):
+        if x % i == 0:
+            
+            return False
+    else:
+        return True
+
+print(prime())
+'''
+
+
+## Episode Thirty-Seven
+'''
+#just python and idle download
+'''
+
+
+## Episode Thirty-Eight
+'''
+for i in range(1,11):
+    for j in range(10-i,0,-1):
+        print(j, end="")
+    print()
+
+for i in range(1,11):
+    for j in range(10-i,0,-1):
+        print(" ", end="")
+    print("*")
+
+for i in range(1,10):
+    for j in range(10-i,0,-1):
+        print(" ", end="")
+    for k in range(1,i+1):
+        print(k,end="")
+    print()
+
+for i in range(1,10):
+    for j in range(10-i,0,-1):
+        print(" ", end="")
+    for k in range(1,i+1):
+        print(k,end=" ")
+    print()
+'''
+
+
+## Episode Thirty-Nine
+'''
+def time_table():
+    while True:
+        try:
+            x = int(input("Enter a number: "))
+            for i in range(1,x+1):
+                for j in range(1,x+1):
+                    print(f"{i*j:3}", end="")
+                print()
+            print()
+            q = input("Would you like another table? (y/n): ").lower()[0]
+            if q == "n":
+                break
+        except ValueError:
+            print("Please enter a number.")
+            continue
+
+time_table()
+'''
+
+
+## Episode Fourty
+'''
+def leap_year():
+    while True:
+        try:
+            x = int(input("Enter a year: "))
+            if x % 4 == 0:
+                if x % 100 == 0:
+                    if x % 400 == 0:
+                        print(x, "is a leap year.")
+                    else:
+                        print(x, "is not a leap year.")
+                else:
+                    print(x, "is a leap year.")
+            else:
+                print(x, "is not a leap year.")
+            q = input("Would you like to test another year? (y/n): ").lower()[0]
+            if q == "n":
+                break
+        except ValueError:
+            print("Please enter a year.")
+
+leap_year()
+'''
+
+
+## Episode Fourty-One
+'''
+x = "+ "
+y = "- " * 5
+
+def bottom():
+    print((x + y) * 2 + x)
+
+def middle():
+    for i in range(4):
+        print(("|           "*3))
+
+def box():
+    bottom()
+    middle()
+
+def grid():
+    box()
+    box()
+    bottom()
+    
+grid()
+'''
+
+
+## Episode Fourty-Two
+'''
+def prime(x):
+    for i in range(2,x):
+        if x % i == 0:
+            return False
+    return True
+
+def nth_prime(x):
+    num = 3
+    prime = 2
+    if x == 1:
+        return 2
+    while prime < x:
+        num += 2
+        if prime(num):
+            prime += 1
+        return num
+print(nth_prime(1000))
+'''
+
+
+## Episode Fourty-Three
+'''
+def dia(x):
+    for i in range(x,-1,-1):
+        print(" " * i, end = "")
+        for j in range(x+1-i):
+            print(j, end = "")
+        for a in range(x-i-1,-1,-1):
+            print(a, end = "")
+        print()
+    for b in range(1,x+1):
+        print(" " * b, end = "")
+        for c in range(x+1-b):
+            print(c, end = "")
+        for d in range(c-1,-1,-1):
+            print(d, end = "")
+        print()
+dia(9)
+'''
+
+
+## Episode Fourty-Four
+'''
+s,n,t = 6,9,20
+def nuggets(y):
+    global x
+    x = {}
+    for i in range(10):
+        for j in range(10):
+            for k in range(10):
+                tot = k*s+j*n+i*t
+                x[tot] = [k,j,i]
+                if y == tot:
+                    break
+            if y == tot:
+                break
+        if y == tot:
+            break
+    print(y,x[y])
+
+nuggets(50)
+'''
+
+
+
+## Episode Fourty-Five
+'''
+def sec(x):
+    d = x//86400
+    h = (x%86400)//3600
+    m = (x%3600)//60
+    s = (x%60)
+    print(F"{d}:{h}:{m}:{s}")
+
+print("d:h:m:s")
+
+sec(134523423)
+'''
+
+
+## Episode Fourty-Six
+'''
+def fact(x):
+    if x == 1:
+        return 1
+    else:
+        return x * fact(x-1)
+
+print(fact(40))
+
+'''
+
+
+## Episode Fourty-Seven
+'''
+USE DIR
+'''
+
+
+## Episode Fourty-Eight
+'''
+students = ["Atsumu", "Sakusa", "Hinata", "Bokuto"]
+students.pop(3)
+'''
+
+
+## Episode Fourty-Nine
+'''
+F string is better
+'''
+
+
+## Episode Fifty
+'''
+command line things
+'''
+
+
+## Episode Fifty-One
+'''
+Command line start up
+'''
+
+
+## Episode Fifty-Two
+'''
+def pyramid(x):
+    for i in range(x,-1.-1):
+        print(" " * i, end = "")
+        for j in range(x+1-i):
+            print(j, end = "")
+        for k in range(x-i-1,-1,-1):
+            print(k, end = "")
+    print()
+
+pyramid(9)
+'''
+
+
+## Episode Fifty-Three
+'''
+names = [i.strip() for i in input("Enter name seperated by commas: ").split(",")]
+'''
+
+
+## Episode Fifty-Four
+'''
+import random
+from random import randint
+from random import randint and ri
+from random import *
+'''
+
+
+## Episode Fifty-Five
+'''
+import random
+number = random.randint(1,20)
+guess = int(input("Make a guess: "))
+
+while guess != number:
+    if guess > number:
+        print("Please guess a lower number.")
+        guess = int(input("Make a guess: "))
+    else:
+        print("Please guess a higher number.")
+        guess = int(input("Make a guess: "))
+else:
+    print("Your guess is correct.")
+'''
+
+
+## Episode Fifty-Six
+'''
+import random
+number = random.randint(1,20)
+print(number)
+while True:
+        try:
+            guess = int(input("Make a guess: "))
+            while guess != number:
+                if guess > number:
+                    print("Please guess a lower number.")
+                    guess = int(input("Make a guess: "))
+                else:
+                    print("Please guess a higher number.")
+                    guess = int(input("Make a guess: "))
+            else:
+                print("Your guess is correct.")
+                break
+        except ValueError:
+            print("Please enter a number.")
+'''
+
+
+## Episode Fifty-Seven
+'''
+x = dict()
+x["Sam"] = 31
+y = {"Tom":24}
+
+fruit = {"bananas": 3, "apples": 1, "grapes": 2}
+food = dict()
+food["fruit"] = fruit
+for key, value in fruit.items():
+    print(key, ":", value)
+'''
+
+
+## Episode Fifty-Eight
+'''
+def power(x,exe=1):
+    return x**ex
+'''
+
+
+## Episode Fifty-Nine
+'''
+long text, too long, didn't read; lowkey nevermore
+'''
+
+
+## Episode Sixty
+'''
+file = file.split()
+book = []
+for i in file:
+    if i in book:
+        book[i] += 1
+    else:
+        book[i] = 1
+del file
+def last(x):
+    return x[-1]
+book = book.items()
+sort_book = sorted(book,key=last,reverse=True)
+for i in sort_book[:10]:
+    print(i[0], ":", i[1])
+'''
+
+
+## Episode Sixty-One
+'''
+x = sorted(x)
+print(x[0], x[-1])
+
+x = [35,523,52,54,61,74,721,36]
+print(min(x))
+print(max(x))
+'''
+
+
+## Episode Sixty-Two
+'''
+x = ()
+#tuple can only be counted and index is not mutable
+'''
+
+
+## Episode Sixty-Three
+'''
+students = ["Atsumu", "Sakusa", "Hinata", "Bokuto"]
+grades = [98, 100, 50, 35]
+count = 0
+class_grades = []
+for i in students:
+    class_grades.append((i,grades[count]))
+    count += 1
+
+#zip
+students = ["Atsumu", "Sakusa", "Hinata", "Bokuto"]
+grades = [98, 100, 50, 35]
+class_grades = list(zip(students, grades))
+for i in class_grades:
+    print(i)
+'''
+
+
+## Episode Sixty-Four
+'''
+names = ["Atsumu", "Sakusa", "Hinata", "Bokuto"]
+enu = list(enumerate(names,1))
+
+for i in enu:
+    print(i[0],i[1])
+'''
+
+
+## Episode Sixty-Five
+'''
+x = -4
+if x > 0:
+    print(x)
+else:
+    print(0-x)
+
+print(abs(4-8))
+'''
+
+
+## Episode Sixty-Six
+'''
+def cal():
+    x = eval(input("Enter: "))
+    print(x)
+'''
+
+
+## Episode Sixty-Seven
+'''
+count = 0
+for i in abc:
+    if i == "a":
+        count += 1
+print(count)
+
+abc = "abjeojvanveokacnewal"
+print(abc.count("a"))
+'''
+
+
+## Episode Sixty-Eight
+'''
+import string
+lettters = string.ascii_letters
+lower = string.ascii_lowercase
+'''
+
+
+## Episode Sixty-Nine
+''' 
+import string
+letters = string.ascii_lowercase
+num = list(range(1,27))
+key = dict(zip(letters,num))
+'''
+ 
+
+## Episode Seventy
+'''
+word = "helio"
+print(ord(word[0]))
+'''
+
+
+## Episode Seventy-One
+'''
+count = 0
+for i in word:
+    count += key[i]
+print(count)
+
+import string
+letters = string.ascii_lowercase
+num = list(range(1,27))
+key = dict(zip(letters,num))
+word = "happy"
+count = sum([key[i] for i in word])
+print(count)
+'''
+
+
+## Episode Seventy-Two
+'''
+THANK YOU!
+'''
+
+
+
+## Episode Seventy-Three
+'''
+val = 11
+for i in range(1,val):
+    for j in range(val-i,1,-1):
+        print(" ", end = "")
+    for k in range(1,i+1):
+        print(f"{k:3}", end = "")
+    print()
+''' 
+
+
+## Episode Seventy-Four
+'''
+word = "happy"
+count = sum([ord(i)-96 for i in word])
+print(count)
+'''
+
+
+## Episode Seventy-Five
+'''
+tot = 0
+for i in x:
+    tot += i
+print(tot)
+
+x = [2,4,1,6,7]
+print(sum(x))
+'''
+
+
+## Episode Seventy-Six
+'''
+And & Or Keywords
+'''
+
+
+
+## Episode Seventy-Seven
+'''
+def lower(x,y):
+    if x > y:
+        print(x/y)
+    else:
+        print(y/x)
+
+def lower(x,y):
+    print(max(x,y).min(x,y))
+'''
+
+
+## Episode Seventy-Eight
+'''
+x = 6
+for i range(x):
+    print(i)
+
+x = 6
+y = 2
+
+for i in range (y,x+1):
+    print(i)
+
+name = "Nick"
+
+for i in range(1,len(name)+1):
+    print(i)
+'''
+
+
+## Episode Seventy-Nine
+'''
+def lcd(x,y):
+    for i in range(2,min(x,y)+1):
+        if max(x,y) % i == 0  and min(x,y) % i == 0:
+            print(i)
+            break
+lcd(18,3)
+'''
+
+
+## Episode Eighty
+'''
+name = "Iwaoi"
+x = [1,2,3]
+y = (1,2,3)
+d = {"a" : 1, "b" : 2}
+print(len(d))
+'''
+
+
+## Episode Eighty-One
+'''
+a,b = 1,2
+print(a,b)
+b,a = a,b
+print(a,b)
+'''
+
+
+## Episode Eighty-Two
+'''
+x = ""
+a = "abcdefg"
+
+for i in a:
+    if len(x) < 3:
+        x += i
+    else:
+        break
+    print(x)
+'''
+
+
+## Episode Eighty-Three
+'''
+x = ""
+a = "abcdefg"
+
+place = 0
+while len(x) < 4:
+    x += a[place]
+    place += 1
+print(x)
+'''
+
+
+## Episode Eighty-Four
+'''
+dad = "dadaddadaadada"
+count = 0
+for i in range(len(dad)):
+    if dad[i:i+3] == "dad":
+        count += 1
+print(count)
+'''
+
+
+## Episode Eighty-Five
+'''
+def odd(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+
+def odd(x):
+    return x % 2 != 0
+'''
+
+
+## Episode Eighty-Six
+'''
+x = "abcdefa"
+print(x.find("a"))
+print(x.find("a",1))
+'''
+
+
+## Episode Eighty-Seven
+'''
+dad = "dadaddadaadada"
+count,place = 0,0
+while dad.find("dad",place) >= 0:
+    place = dad.find("dad",place) + 1
+    count += 1
+print(count)
+'''
+
+
+## Episode Eighty-Eight
+'''
+dad = "dadaddadaadada"
+sub = "dad"
+def sub_string(s,sub):
+    count, place = 0,0
+    while s.find(sub,place) >= 0:
+        place = s.find(sub,place) + 1
+        count += 1
+    return f"{sub} occurs {count} times."
+print(sub_string(dad,sub))
+'''    
+
+
+## Episode Eighty-Nine
+'''
+COUNT ONLY WORKS WITH NON-OVERALAPPING OCCURANCES
+'''
+
+
+## Episode Ninety
+'''
+
+'''
+
+
+
+## Episode Ninety-One
+'''
+def square_num(x)
+return x**2
+'''
+
+
+## Episode Ninety-Two
+'''
+def square_root(x):
+    for math import sqrt
+    print(sqrt(x))
+
+def square_root(x):
+    print(x**.5)
+'''
+
+
+## Episode Ninety-Three
+'''
+def factor(x,y):
+    return x % y == 0
+'''
+
+
+## Episode Ninety-Four
+'''
+def factors(x):
+    d = []
+    for i in range(2,x+1):
+        if x % i == 0:
+            d.append(i)
+    return d
+
+print(factors(10))
+'''
+
+
+## Episode Ninety-Five
+'''
+def factors(x):
+    d = [i for i in range(1,x+1) if x % i == 0]
+    return d
+
+for i in factors(18):
+    print(i)
+'''
+
+
+## Episode Ninety-Six
+'''
+def factors(x):
+    d = [i for i in range(x+1,0,-1) if x % i == 0]
+    return d
+num = [81,18]
+for i in factors(max(num)):
+    if i in factors(min(num)):
+        print(i)
+        break
+'''
+
+
+## Episode Ninety-Seven
+'''
+def factors(x):
+    d = [i for i in range(x+1,0,-1) if x % i == 0]
+    return d
+num = [81,18]
+print(f"Finding the GCF for: {num[0]} and {num[1]}")
+for i in factors(min(num)):
+    if i in factors(max(num)):
+        print(f"Test: {i} - Match")
+        break
+    else:
+        print(f"Test: {i} - Fail")
+'''
+
+
+## Episode Ninety-Eight
+'''
+def gcd(x,y):
+    com = min(x,y)
+    while x % com != 0 or y % com != 0:
+        com -= 1
+    return com
+print(gcd(81,18))
+'''
+
+
+## Episode Ninety-Nine
+'''
+def taxes(price,tax):
+    print(f"${round(price*tax,2)}")
+taxes(25.25,.07)
+
+def taxes(price,tax):
+    print(round(price*tax,2))
+taxes(25.25,.07)
+'''
+
+## Episode Hundred
+'''
+ANYTHING IS POSSIBLE!!! ANYONE CAN CODE!!!
+'''

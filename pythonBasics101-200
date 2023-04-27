@@ -1,0 +1,808 @@
+## Playlist = https://www.youtube.com/playlist?list=PLaYT64KWZAEPtXVHEHfbLCU33yFZ1mAgS
+
+## Episode One to Five
+'''
+x = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+low = 0
+high = 100
+
+while True:
+    guess = (high + low) // 2
+    print(f"Is your number {guess}?")
+    response = input("Enter your number: ").lower()
+    if response == "h":
+        high = guess
+    elif response == "l":
+        low = guess
+    elif response == "c":
+        print("Congratulations. You are correct")
+        break
+    else:
+        print("Please enter an accepted response.")
+'''
+
+
+## Episode Six
+'''
+x = "4"
+x.isnumberic()
+#returns True/False
+'''
+
+
+## Episode Seven
+'''
+x = "tacocat"
+print(x[:len(x)//2+1])
+print(x[len(x)//2+1:])
+'''
+
+
+## Episode Eight
+'''
+x = "tacocat"
+
+def cutting(word):
+    mid = len(x)//2
+    first = x[:mid]
+    last = x[mid:]
+    print(last+first)
+cutting(x)
+#OR you cound just...
+print(x[len(x)//2:]+x[:len(x)//2])
+'''
+
+
+## Episode Nine
+'''
+x = ["4","10","Akaashi"]
+for i in x:
+    if x.isnumeric():
+        print(int(i)*2)
+#OR you cound just...
+y = [print(int(i)*2) for i in x if i.isnumeric()]
+'''
+
+
+## Episode Ten
+'''
+book = "a court of thorns and roses"
+cap = book.title()
+names = ["alhaitham","barbara","candace","dehya"]
+caps = [i.title() for i in names]
+'''
+
+
+## Episode Eleven and Twelve
+'''
+x = []
+for i in range(3):
+    x.append(list(range(3)))
+
+y = [(list(range(3))) for i in range(3)]
+'''
+
+
+## Episode Thirteen to Sixteen
+'''
+x,y = 100,84
+rounding = [print(i+1) if i%5 == 4
+            else print(i+2) if i%5 == 3
+            else print(i)
+            for i in range(x,y,-1)]
+#OR
+def fives(x):
+    if x%5 == 3 or x%5 == 4:
+        x += (5-x%5)
+    print(x)
+'''
+
+
+## Episode Seventeen
+'''
+x = []
+y = ""
+d = {}
+t = ()
+z = 1
+f = 1.2
+type(x)
+'''
+
+
+## Episode Eighteen to Twenty-One
+'''
+from random import randint
+c_grades = [randint(60,100) for i in range(10)]
+y_grades = [randint(60,100) for i in range(10)]
+
+def better_than_average(clas, you):
+    c_avg = sum(clas)/len(clas)
+    y_avd = sum(you)/len(you)
+    if y_avd > c_avg:
+        return "Your grades are better than the class average."
+    else:
+        return "Your grades are not better than the class average."
+print(better_than_average(c_grades,y_grades))
+'''
+
+    
+## Episode Twenty-Two
+'''
+Variable Rules
+'''
+
+
+## Episode Twenty-Three - Twenty-Eight
+'''
+x = [list(range(5*i+1,5*i+6)) for i in (range(5))]
+
+x = sorted(x,key=lambda x: x[-1],reverse=True)
+x = [print(i) for i in x]
+
+def last(x):
+    return x[-1]
+
+x = sorted(x,key=last,reverse=True)
+x = [print(i) for i in x]
+'''
+
+
+## Episode Twenty-Nine - Thirty-Three
+'''
+import random
+x25 = list(range(1,26))
+random.shuffle(x25)
+x = []
+tab = [[] for i in range(5)]
+
+for i in range(5):
+       for j in range(5):
+           tab[j].append(x25.pop())
+
+for i in tab:
+    i.sort()
+
+def last(x):
+    return x[-1]
+
+tab = sorted(tab,key=lambda x: x[-1],reverse=True)
+
+for i in tab:
+    for j in i:
+        print(f"{j:4}", end= "")
+    print()
+
+x = tab[0][2:4] + tab[1][3:] + tab[2][4:]
+x.sort()
+'''
+
+
+## Episode Thirty-Four
+'''
+x = [1,2,5,7,3,2,11]
+x.index(2)
+x.index(2,2)
+'''
+
+
+## Episode Thirty-Five and Thirty-Six
+'''
+x = [1,4,2,6,7]
+del x[1]
+x.index(2)
+del x[x.index(2)]
+
+name = "Takami Keigo"
+del name
+'''
+
+
+## Episode Thirty-Seven
+'''
+syntax errors
+'''
+
+
+## Episode Thirty-Eight - Fourty
+'''
+x = "abcaafahbaabdfgz"
+sub = x[0]
+long,length = sub, 1
+
+for i in x[1:]:
+    if ord(sub[-1]) <= ord(i):
+        sub += i
+        if len(sub) > len(long):
+            length = len(sub)
+            long = sub
+    else:
+        sub = i
+print(long)
+'''
+
+
+## Episode Fourty-One
+'''
+import re
+x = "abcaafahbaabdfgz"
+abc = "a*b*c*d*e*f*g*h*i*j*k*l*m*n*o*p*q*r*s*t*u*v*w*x*y*z*"
+pat = re.compile(abc)
+print(max(pat.findall(x),key=len))
+'''
+
+
+## Episode Fourty-Two
+'''
+from string import ascii_lowercase as lower
+abc = ""
+for i in lower:
+    abc += i+"*"
+print(abc)
+'''
+
+
+## Episode Fourty-Three
+'''
+def sum_pos(num):
+    return sum([i for i in num if i > 0])
+print(sum_pos([1,5,4,-8,-3,5]))
+'''
+
+
+## Episode Fourty-Four
+'''
+def greeting():
+    """This will say hi"""
+    print("hello")
+'''
+
+
+## Episode Fourty-Five
+'''
+def tip(bill,tip=.12):
+    """Enter the cost of bill, and default of 12%"""
+    return round(bill * tip,2)
+print(tip(34.34,.2))
+'''
+
+
+## Episode Fourty-Six
+'''
+abc = "abc"
+new = list(abc)
+abc = "*".join(new) + "*"
+'''
+
+
+## Episode Fourty-Seven
+'''
+x = [1,3,7]
+a,b,c = x
+print(a)
+print(b)
+print(c)
+'''
+
+
+## Episode Fourty-Eight
+'''
+while True:
+    try:
+        number = int(input("Enter a number: "))
+    except ValueError:
+        print("Please enter a number.")
+'''
+
+
+## Episode Fourty-Nine
+'''
+x = 10 #global
+def dub():
+    x = 5 # local
+    print(x)
+
+print(dub())
+print(x)
+'''
+
+
+## Episode Fifty
+'''
+import time
+print(time.time())
+time.timezone
+time.gmtime()
+time.tzname
+time.localtime()
+'''
+
+
+## Episode Fifty-One
+'''
+def ends_with(x,y):
+    """check to see if x ends with x"""
+    return x.endswith(y)
+print(ends_with("jumped","ed"))
+'''
+
+
+## Episode Fifty-Two
+'''
+def distance():
+    """Enter two coordinate points to find distance"""
+    first = input("Enter x and y with a space in between: ").split()
+    second = input("Enter x and y with a space in between: ").split()
+    a = int(second[0]) - int(first[0])
+    b = int(second[1]) - int(first[1])
+    return ((a**2)+ (b**2))**.5
+
+print(distance())
+'''
+
+
+## Episode Fifty-Three
+'''
+def phone_number():
+    x = input("Enter a number: ")
+    print(f"({x[:3]})-{x[3:6]}-{x[6:]}")
+
+phone_number()
+'''
+
+
+## Episode Fifty-Four
+'''
+from random import randint as ri, seed as se
+se(123)
+for i in range(10):
+    print(ri(0,10))
+'''
+
+
+## Episode Fifty-Five
+'''
+def starts(string,var):
+    return string.startswith(var)
+print(starts("rgrgrnn","rg"))
+'''
+
+
+## Episode Fifty-Six
+'''
+from math import factorial as fact
+print(fact(5))
+'''
+
+
+## Episode Fifty-Seven
+'''
+def fib(x):
+    a,b = 0,1
+    tab = []
+    for i in range(x):
+        a,b = b,a+b
+        tab.append(a)
+    print(tab)
+fib(5)
+'''
+
+
+## Episode Fifty-Eight
+'''
+from math import pi
+'''
+
+
+## Episode Fifty-Nine
+'''
+def odds(balls,pick,power=False):
+    """Enter number of regular balls,
+number of balls picked, if number of powerballs"""
+    from math import factorial as fact
+    p_ball = 1
+    if p_ball:
+        p_ball = int(input("How many powerballs: "))
+    return (fact(balls))/(fact(5)*(balls-pick))*p_ball
+
+print(odds(69,5,True))
+'''
+
+
+## Episode Sixty
+'''
+from math import pi
+pi = 3.14
+def area(r):
+    global pi
+    pi = 3.14159
+    return pi*r**2
+'''
+
+
+## Episode Sixty-One
+'''
+line = "\tHello.\n\tHow are you?"
+print(line)
+'''
+
+
+## Episode Sixty-Two
+'''
+from random import choice
+x = [print(choice(list(range(1,11)))) for i in range(23)]
+'''
+
+
+## Episode Sixty-Three
+'''
+new = list(range(10))
+print(new)
+new.remove(3)
+print(new)
+new.pop(6)
+print(new)
+'''
+
+
+## Episode Sixty-Four
+'''
+from time import time
+from random import randint,seed
+start = time()
+seed(1)
+new = [randint(0,10) for i in range(500000)]
+x = [i*i for i in new]
+end = time()
+print(end-start)
+
+start = time()
+new = []
+seed(1)
+for i in range(500000):
+    new.append(randint(0,10))
+x = []
+for i in new:
+    x.append(i*i)
+end = time()
+print(end-start)
+'''
+
+
+## Episode Sixty-Five
+'''
+from random import shuffle as shu, choice as cho
+door = ["goat","goat","car"]
+win,loss = 0,0
+shu(door)
+
+def play_cho():
+    return cho(door)
+
+def game():
+    global win,loss
+    play_cho()
+    if "car" == play_cho():
+        win += 1
+    else:
+        loss += 1
+
+def play(x):
+    for i in range(x):
+        game()
+    print(f"Wins = {win}\nPer = {win/x}")
+    print(f"Losses = {loss}\nPer = {loss/x}")
+
+play(1000)
+'''
+
+
+## Episode Sixty-Six - Sixty-Seven
+'''
+def exp(n):
+    n = 1
+    def num(x):
+        nonlocal n
+        n += 1
+        return x**n
+    return num
+
+square = (exp(2))
+print(square(2))
+
+cube = exp(3)
+print(cube(2))
+'''
+
+
+## Episode Sixty-Eight - Sixty-Nine
+'''
+from random import shuffle as shu, choice as cho
+def game(x,change=False):
+    door = ["goat","goat","car"]
+    win,loss = 0,0
+    shu(door)
+
+    def no_switch():
+        nonlocal win,loss
+        if "car" == cho(door):
+            win += 1
+        else:
+            loss += 1
+
+    def switch():
+        door = ["goat","goat","car"]
+        nonlocal win,loss
+        door.pop(cho(range(3)))
+        door.remove("goat")
+        sec_cho = door[0]
+        if sec_cho == "car":
+            win += 1
+        else:
+            loss += 1
+            
+    for i in range(x):
+        if change:
+            switch()
+        else:
+            no_switch()
+    print(f"Wins = {win}\nPer = {win/x}")
+    print(f"Losses = {loss}\nPer = {loss/x}")
+
+game(1000,True)
+'''
+
+
+## Episode Seventy
+'''
+students = ["Jake", "Amy", "Charles", "Terry"]
+s_dict = {student[0].upper(): student for student in students}
+print(s_dict)
+''' 
+
+
+## Episode Seventy-One - Seventy-Two
+'''
+def even(x):
+    if x % 2 == 0:
+         print(x,"is even")
+         return
+    print(x,"is odd")
+
+even(45)
+type(even(4))
+even(4) == None
+'''
+
+
+## Episode Seventy-Three
+'''
+import this
+'''
+
+
+## Episode Seventy-Four - Seventy-Six
+'''
+sen = "I got a 100% on my test"
+def encrp(text,code):
+    enc = [ord(i)+code for i in text]
+    new = "".join([chr(i) for i in enc])
+    return new
+
+new_sen = encrp(sen,2)
+
+def decrp(text,code):
+    dec = [ord(i)-code for i in text]
+    new = "".join([chr(i) for i in dec])
+    return new
+
+new_dec = decrp(new_sen,2)
+
+print(new_sen)
+print(new_dec)
+'''
+
+
+## Episode Seventy-Seven
+'''
+text = "this line has i in it a lot"
+new = text.replace("i","*",10)
+print(new)
+'''
+
+
+## Episode Seventy-Eight
+'''
+students = ["Jake", "Amy", "Holt", "Kevin"]
+grade = [5,7,6,8]
+classes = list(zip(students,grade))
+new_students,grades = zip(*classes)
+print(new_students, grades)
+'''
+
+
+## Episode Seventy-Nine
+'''
+grade = [5,6,6,7]
+def add(x):
+    return x+1
+
+new_grade = list(map(add,grade))
+print(new_grade)
+
+new_grade2 = list(map(lambda x: x+1, grade))
+print(new_grade2)
+'''
+
+
+## Episode Eighty - Eighty-One
+'''
+x = 13
+y = x
+id(x)
+id(y)
+x = 12
+id(x)
+id(y)
+'''
+
+
+## Episode Eighty-Two
+'''
+x = [1,2,3]
+y = x
+x[0] = 0
+print(x)
+print(y)
+
+x = [1,2,3]
+y = x.copy()
+x[0] = 0
+print(x)
+print(y)
+''' 
+
+
+## Episode Eighty-Three
+'''
+shopping_list = ["apples", "cereal", "milk","butter","milk"] 
+short_list = set(shopping_list)
+print(short_list)
+'''
+
+
+## Episode Eighty-Four
+'''
+def series(num): #yield for generators
+    n = 0
+    while n < num:
+        yield n
+        n += 1
+five = series(5)
+print(next(five))
+print(next(five))
+print(next(five))
+print(next(five))
+print(next(five))
+print(next(five))
+'''
+
+
+## Episode Eighty-Five and Ninety-Two
+'''
+print(len("Kei"))
+print(len(["Q","W","E"]))
+print(ord("d")-ord("a"))
+print("sss".count("s"))
+print("jake".find("e"))
+'''
+
+
+## Episode Eighty-Six
+'''
+name = "Sara"
+print(name)
+name = iter(name))
+'''
+
+
+## Episode Eighty-Seven
+'''
+x = "{}, {}, & {}".format("Smith", "David", "Thomas")
+print(x)
+x = "{1}, {2}, & {0}".format("Smith", "David", "Thomas")
+print(x)
+names = ["Smith", "David", "Thomas"]
+x = "{name[2]}, {name[1]}, & {name[0]}".format(name=names)
+print(x)
+cast = {"Romeo" : "Roma", "Juliet" : "Juliette", "Shakespeare" : "Chole Gong"}
+x = "{cast[Romeo]}, {cast[Juliet]}, & {cast[Shakespeare]}".format(cast=cast)
+print(x)
+'''
+
+
+## Episode Eighty-Eight
+'''
+num = iter(list(range(5)))
+print(next(num))
+print(next(num))
+print(next(num))
+print(next(num))
+print(next(num))
+'''
+
+
+## Episode Eighty-Nine
+'''
+from math import factorial as fact
+'''
+
+
+## Episode Ninety
+'''
+__abs__ 
+'''
+
+
+
+## Episode Ninety-One and Ninety-Three
+'''
+from urllib.request import urlopen as url
+page = url("http://www.google.com")
+page.close()
+page.closed
+'''
+
+
+## Episode Ninety-Four
+'''
+file = open("text_1.txt","w")
+file.close()
+'''
+
+
+## Episode Ninety-Five
+'''
+from urllib.request import urlopen as url
+page = url("http://www.google.com")
+page.read(31)
+page.read()
+'''
+
+
+## Episode Ninety-Six - Ninety-Seven
+'''
+from urllib.request import urlopen as url
+page = url("http://www.textfiles.com/etext/AUTHORS/POE/poe-raven-702.txt")
+text = page.read()
+test = text.decode()
+type(text)
+type(test)
+'''
+
+
+## Episode Ninety-Eight
+'''
+from urllib.request import urlopen as url
+page = url("http://www.textfiles.com/etext/AUTHORS/POE/poe-raven-702.txt")
+text = page.read()
+test = text.decode()
+page.close()
+file = open("raven.txt","w")
+file.write(text)
+file.close()
+'''
+
+
+## Episode Ninety-Nine
+'''
+def test(v,var):
+    pass
+#"let everthing be" "holder" "ignore this" 
+'''
+
+
+## Episode Hundred
+'''
+"You Can Learn How To Program"
+'''

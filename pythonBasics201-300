@@ -1,0 +1,626 @@
+## Playlist = https://www.youtube.com/playlist?list=PLaYT64KWZAENa0WfswdDzhivkiS6hA-Uj
+
+## Episode One - Five
+'''
+Command Prompt and pip installation
+
+import periodictable as ptable
+import pprint
+pprint.pprint(dir(ptable))
+
+import sys
+'''
+
+
+## Episode Six
+'''
+import sys
+print(sys.argv)
+'''
+
+
+## Episode Seven - Eight
+'''
+class rect():
+    
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
+        print(f"Your rectangle is {length} by {width}")
+
+    def perimeter(self):
+        return 2*(self.width + self.length)
+
+    def area(self):
+        return self.width*self.length
+'''
+
+
+## Episode Nine
+'''
+import requests
+'''
+
+
+## Episode Ten
+'''
+repeat
+'''
+
+
+## Episode Eleven
+'''
+import requests
+url = "http://www.textfiles.com/etext/AUTHORS/POE/poe-raven-702.txt"
+page = requests.get(url)
+print(page.text)
+'''
+
+
+## Episode Twelve - Fourteen
+'''
+file = open("raven.txt")
+file.readline()
+file.read()
+file.close()
+
+while open("raven.txt") as file:
+    print(file.read())
+'''
+
+
+## Episode Fiveteen
+'''
+file = open("hello.txt","w")
+file.write("hello")
+file.close()
+file.write("My name is what")
+file = open("hello.txt","a")
+'''
+
+
+## Episode Sixteen - Twenty-Five
+'''
+def my_list():
+    while True:
+        with open("shopping_list.txt","a+") as file:
+            print("type EXIT at anytime")
+            item = input("Enter item: ")
+            if item == "EXIT":
+                break
+            elif item == "please tell":
+                print(file.tell())
+            elif item == "check":
+                file.seek(0)
+                items = list(enumerate(file.read().split(),1))
+                for count, item in items:
+                    print(f"{count:3}) {items}")
+                remove = int(input("Enter number to delete or 0 to continue: ")
+                if remove == 0:
+                    continue
+                else:
+                    del items[remove-1]
+                    with open("shopping_list.txt","w") as file:
+                        for item in items:
+                            file.write(item[1] + "\n")
+            else:
+                file.write(item + "\n")
+my_list()
+'''
+
+
+## Episode Twenty-Six - Thirty and Thirty-Two
+'''
+import csv
+with open("company_list.xlsx","r") as file:
+    reader = csv.reader(file)
+    for i in range(10):
+        print(next(reader))
+    for row in reader:
+        print(row[0],row[1])
+
+import csv
+with open("company_list.xlsx","r",newline=" ") as file:
+    reader = csv.reader(file)
+    with open("symbol.csv","w") as file:
+        writer = csv.writer(file)
+        for line in writer:
+            writer.writerow(line)
+'''
+
+
+## Episode Thirty-One
+'''
+old string formatting
+'''
+
+
+## Episode Thirty-Three
+'''
+n_file = input("Enter file name: ")
+path = input("Enter directory: ")
+
+with open(n_file,"r") as file:
+    text = file.read()
+    with open(path+n_file,"w") as file:
+        file.write(text)
+'''
+
+
+## Episode Thirty-Four
+'''
+num = [i for i in range(11)]
+even = [i for i in range(11) if i%2==0]
+def is_prime(x):
+    for i in range(2,x):
+        if x%i==0:
+            return False
+    else:
+        return True
+    
+primes = [i for i in range(2,101) if is_prime(i)]
+'''
+
+
+## Episode Thirty-Five
+'''
+
+'''
+from string import ascii_uppercase as letters
+
+a_f = letters[:6]
+num = list(range(1,7))
+
+board = [["O" for i in range(6)] for i in range(6)]
+
+for i in board:
+    print(" ".join(i))
+
+
+## Episode Thirty-Six
+'''
+
+'''
+
+
+
+## Episode Thirty-Seven
+'''
+
+'''
+
+
+
+## Episode Thirty-Eight
+'''
+
+'''
+
+
+
+## Episode Thirty-Nine
+'''
+
+'''
+
+
+
+## Episode Fourty
+'''
+
+'''
+
+
+
+## Episode Fourty-One
+'''
+
+'''
+
+
+
+## Episode Fourty-Two
+'''
+
+'''
+
+
+
+## Episode Fourty-Three
+'''
+
+'''
+
+
+
+## Episode Fourty-Four
+'''
+
+'''
+
+
+
+## Episode Fourty-Five
+'''
+
+'''
+
+
+
+## Episode Fourty-Six
+'''
+
+'''
+
+
+
+## Episode Fourty-Seven
+'''
+
+'''
+
+
+
+## Episode Fourty-Eight
+'''
+
+'''
+
+
+
+## Episode Fourty-Nine
+'''
+
+'''
+
+
+
+## Episode Fifty
+'''
+
+'''
+
+
+
+## Episode Fifty-One
+'''
+
+'''
+
+
+
+## Episode Fifty-Two
+'''
+
+'''
+
+
+
+## Episode Fifty-Three
+'''
+
+'''
+
+
+
+## Episode Fifty-Four
+'''
+
+'''
+
+
+
+## Episode Fifty-Five
+'''
+
+'''
+
+
+
+## Episode Fifty-Six
+'''
+
+'''
+
+
+
+## Episode Fifty-Seven
+'''
+
+'''
+
+
+
+## Episode Fifty-Eight
+'''
+
+'''
+
+
+
+## Episode Fifty-Nine
+'''
+
+'''
+
+
+
+## Episode Sixty
+'''
+
+'''
+
+
+## Episode Sixty-One
+'''
+
+'''
+
+
+
+## Episode Sixty-Two
+'''
+
+'''
+
+
+
+## Episode Sixty-Three
+'''
+
+'''
+
+
+
+## Episode Sixty-Four
+'''
+
+'''
+
+
+
+## Episode Sixty-Five
+'''
+
+'''
+
+
+
+## Episode Sixty-Six
+'''
+
+'''
+
+
+
+## Episode Sixty-Seven
+'''
+
+'''
+
+
+
+## Episode Sixty-Eight
+'''
+
+'''
+
+
+
+## Episode Sixty-Nine
+'''
+
+'''
+
+
+
+## Episode Seventy
+'''
+
+'''
+
+
+
+## Episode Seventy-One
+'''
+
+'''
+
+
+
+## Episode Seventy-Two
+'''
+
+'''
+
+
+
+## Episode Seventy-Three
+'''
+
+'''
+
+
+
+## Episode Seventy-Four
+'''
+
+'''
+
+
+
+## Episode Seventy-Five
+'''
+
+'''
+
+
+
+## Episode Seventy-Six
+'''
+
+'''
+
+
+
+## Episode Seventy-Seven
+'''
+
+'''
+
+
+
+## Episode Seventy-Eight
+'''
+
+'''
+
+
+
+## Episode Seventy-Nine
+'''
+
+'''
+
+
+## Episode Eighty
+'''
+
+'''
+
+
+
+## Episode Eighty-One
+'''
+
+'''
+
+
+
+## Episode Eighty-Two
+'''
+
+'''
+
+
+
+## Episode Eighty-Three
+'''
+
+'''
+
+
+
+## Episode Eighty-Four
+'''
+
+'''
+
+
+
+## Episode Eighty-Five
+'''
+
+'''
+
+
+
+## Episode Eighty-Six
+'''
+
+'''
+
+
+
+## Episode Eighty-Seven
+'''
+
+'''
+
+
+
+## Episode Eighty-Eight
+'''
+
+'''
+
+
+
+## Episode Eighty-Nine
+'''
+
+'''
+
+
+
+## Episode Ninety
+'''
+
+'''
+
+
+
+## Episode Ninety-One
+'''
+
+'''
+
+
+
+## Episode Ninety-Two
+'''
+
+'''
+
+
+
+## Episode Ninety-Three
+'''
+
+'''
+
+
+
+## Episode Ninety-Four
+'''
+
+'''
+
+
+
+## Episode Ninety-Five
+'''
+
+'''
+
+
+
+## Episode Ninety-Six
+'''
+
+'''
+
+
+
+## Episode Ninety-Seven
+'''
+
+'''
+
+
+
+## Episode Ninety-Eight
+'''
+
+'''
+
+
+
+## Episode Hundred
+'''
+
+'''
+
+
+
+

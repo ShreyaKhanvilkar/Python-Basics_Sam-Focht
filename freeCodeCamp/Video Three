@@ -1,0 +1,82 @@
+## Video Three
+def time_table():
+    while True:
+        try: 
+            x = int(input("Enter a number: "))
+            for row in range(x+1):
+                for col in range (x+1):
+                    print(f"{row*col:3}", end=" ")
+                print()
+        except ValueError:
+            print("Please enter a NUMBER.")
+        question = input("Do you want another table? (y/n)").lower()
+        if question[0] == "n":
+            break
+time_table()
+
+def is_prime(num):
+    for i in range(2,num):
+        if num % i == 0:
+            return False
+    return True
+test = [3,6,11,31]
+for nums in test:
+    print(f"{nums} is a prime number {is_prime(nums)}")
+    
+def nth_prime(x):
+    num = 3
+    prime = 2
+    if x == 1:
+        return 2
+    while prime < x:
+        num += 2
+        if is_prime(num):
+            prime += 1
+    return num
+
+prime = [i for i in range(2, 101) if is_prime(i)]
+
+import random
+while True:
+    number = random.randint(1,20)
+    print(number)
+    try:
+        guess = int(input("Enter a guess: "))
+        while guess != number:
+            if guess > number:
+                print("Guess a smaller number.")
+                guess = int(input("Enter a guess: "))
+            else:
+                print("Guess a larger number.")
+                guess = int(input("Enter a guess: "))
+        else:
+            print("You guessed the correct number.")
+            
+    except ValueError:
+        print("Enter a number.")
+        
+    question = input("Do you want to play again? (y/n)").lower()
+    if question[0] == "n":
+        break
+
+# leap years are years divisible by 4, but even century has to be divisible by 4, 100, 400
+years = [1992,1600,1900,2002,2020]
+def leap_year(x):
+    if x % 4 == 0:
+        if x % 100 == 0:
+            if x % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+for year in years:
+    print(year, leap_year(year))
+
+for i in range(len(names)):
+    print(i+1, names[i])
+names = ["Sam","Tom","Steve"]
+for number, name in enumerate(names,start=1):
+    print(number, name)

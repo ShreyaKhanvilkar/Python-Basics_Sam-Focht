@@ -1,0 +1,68 @@
+# Video Two
+count = int(input("Enter a number: "))
+print("Ready?")
+while count >= 0:
+    print(count)
+    count -= 1
+print("Blastoff!!!")
+
+nums = [1,-5,2,-4,0,6,-10,3]
+pos = []
+neg = []
+
+for x in nums:
+    if x > 0:
+        pos.append(x)
+    if x < 0:
+        neg.append(x)
+print(pos)
+print(neg)
+
+nums = [1,-5,2,-4,0,6,-10,3]
+pos = [i for i in range(10) if i > 0]
+
+nums = [1,-5,2,-4,0,6,-10,3]
+list_numbers = []
+for i in range(5):
+    list_numbers.append(list(range(1,6)))
+
+numbers = [random.randint(1,5) for i in range(10)]
+
+import random
+numbers = [i for i in range(1,26)]
+random.shuffle(numbers)
+
+shuffled = [7, 11, 20, 9, 22,
+            15, 25, 10, 2, 19,
+            14, 17, 21, 12, 1,
+            16, 3, 13, 4, 18,
+            23, 8, 24, 5, 6]
+horses = [[],
+          [],
+          [],
+          [],
+          []
+    ]
+for i in range(5):
+    for j in range(5):
+        horses[j].append(shuffled.pop())
+
+
+horses = [[6, 18, 1, 19, 22],
+          [5, 4, 12, 2, 9],
+          [24, 13, 21, 10, 20],
+          [8, 3, 17, 25, 11],
+          [23, 16, 14, 15, 7]]
+
+for race in horses:
+    race.sort()
+
+for race in horses:
+    print(race)
+
+def last(x):
+    return x[-1]
+print()
+new_horses = sorted(horses, key=last, reverse=True)
+for race in new_horses:
+    print(race)

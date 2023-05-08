@@ -1,0 +1,35 @@
+## Video Fourteen
+import random
+def doorgame():
+    life = 5
+    while life > 0:
+        door = random.randint(1,5)
+        print("Door:", door) #for debugging
+        print("Life:", life)
+        life -= 1
+        guess = int(input("Enter a guess of door: ")) 
+        if guess != door:
+            if life > 0: 
+                print("Guess Again!")
+                continue
+            else:
+                print("You lose all of your life. The correct door was " + str(door))
+        else:
+            print("Well done, your managed to escape!")
+        print("Do you want to play again?")
+        q = input("Yes or No?: ").lower()[0]
+        if q == "y":
+            life = 5
+        else:
+            life = 0
+    else:
+        print("Game Over\nThank You For Playing!!!")
+doorgame()
+
+file = "thur Nov 28 2020 18:16:16".replace(" ","_").replace(":","_")
+
+import re
+file = "thur Nov 28 2020 18:16:16"
+file = re.sub("[ :]","_",file)
+
+file = re.sub("[ :]","_",file)

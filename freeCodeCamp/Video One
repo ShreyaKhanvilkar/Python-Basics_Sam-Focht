@@ -1,6 +1,5 @@
 # Playlist: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23
 ## Video One
-'''
 name = "Shreya"
 print(name)
 
@@ -53,4 +52,3 @@ def firstProgram():
     name = input("Enter name: ")
     print("Hello {} nice to meet you!".format(name))
 firstProgram()
-'''

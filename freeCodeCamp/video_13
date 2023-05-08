@@ -1,0 +1,21 @@
+## Video Thirteen
+def sec(x):
+    d = x//86400
+    h = (x%86400)//3600
+    m = (x%3600)//60
+    s = (x%60)
+    print(F"{d}:{h}:{m}:{s}")
+
+print("d:h:m:s")
+sec(4852305)
+
+import time
+f_name = time.asctime().replace(" ","_")+".pkl"
+f_name = f_name.replace(":","_")
+#f_name_2 = f_name.replace(" ","_")
+
+import glob
+files = glob.glob(".py")
+print(files)
+
+x = sorted([1,43,5,27,19,4],reverse=True)

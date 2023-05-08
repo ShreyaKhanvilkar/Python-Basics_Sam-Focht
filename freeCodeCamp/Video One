@@ -1,0 +1,56 @@
+# Playlist: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23
+## Video One
+'''
+name = "Shreya"
+print(name)
+
+for i in range(1,8):
+    print(i)
+    
+list = list(range(5))
+ for i in list:
+    print(i)
+    print(i*2)
+    print()
+print(name)
+
+nums = [1,5,2,4,6,10,3]
+for num in nums:
+    if num%2==0:
+        print(num, "is EVEN")
+    else:
+        print(num, "is ODD")
+nums = [1,-5,2,-4,0,6,-10,3]
+for num in nums:
+    if num > 0:
+        print("positive")
+    elif num < 0:
+        print("negative")
+    else:
+        print("zero")
+def even(x):
+    return x % 2 == 0
+
+def odd(x):
+    return x % 2 != 0
+
+for row in range(5):
+    for col in range(5):
+        print(col,end='')
+    print()
+
+for x in range(1,11):
+    for y in range(1,x+1):
+        print('{:3}'.format(y), end='')
+    print()
+
+def firstProgram():
+    name = input("Enter name: ")
+    print("Hello " + name + " nice to meet you!")
+firstProgram()
+
+def firstProgram():
+    name = input("Enter name: ")
+    print("Hello {} nice to meet you!".format(name))
+firstProgram()
+'''

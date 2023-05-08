@@ -1,0 +1,119 @@
+## Video Six
+from string import ascii_lowercase as lower
+
+key = {}
+for i in range(len(lower)):
+    key[lower[i]] = 1+i
+    
+letters = lower
+nums = list(range(1,27))
+#or
+from string import ascii_lowercase as lower
+key = dict(zip(lower,list(range(1,27))))
+
+file = "any text box or something i don't even know"
+file = file.split()
+book = {}
+for word in file:
+    if word not in book:
+        book[word] = 1
+    else:
+        book[word] += 1
+
+def phone_number():
+    x = input("Enter your phone number: ")
+    print(f"({x[:3]}){x[3:6]}-{x[6:]}")
+
+students = ["touya", "fuyumi", "natuso", "shoto"]
+s_dict = {student[0].upper(): student for student in students}
+print(s_dict)
+
+# local (nonloal) global built-in
+from math import pi
+pi = 3.14
+def area(r):
+    global = pi
+    pi = 3.14159
+    return pi*r*2
+print(area(3))
+
+def exp(n):
+    n = 1
+    def num(x):
+        nonlocal n
+        return x**n
+    return num
+
+square = exp(2)
+cube = exp(3)
+
+def cube(func):
+    def wrapper(arg):
+        return func(arg)**3
+    return wrapper
+@cube
+def num(x):
+    return x
+
+def upper(func):
+    def wrapper():
+        return func().upper()
+    return wrapper
+@upper
+def hi():
+    return "Hi how are you?"
+
+from random import shuffle, choice
+def game(x,change=False):
+    doors = ["goat", "goat", "car"]
+    shuffle(doors)
+    wins,losses = 0,0
+    def no_switch():
+        nonlocal wins,losses
+        if "car" == choice(doors):
+            wins += 1
+        else:
+            losses += 1
+    def switch():
+        door = ["goat", "goat", "car"]
+        nonlocal wins,losses
+        door.pop(choice(range(3)))
+        door.remove("goat")
+        second_choice = door[0]
+        if second_choice == "car":
+            wins += 1
+        else:
+            losses += 1
+    for i in range(x):
+        if change:
+            switch()
+        else:
+            no_switch()
+    print(f"wins: {wins} percent wins: ({wins/x})")
+    print(f"losses: {losses} percent losses: {(losses/x)}")
+game(10000)
+print()
+game(10000,True)
+
+import urllib.request as url
+page = url.urlopen("http://www.textfiles.com.etext/AUTHOR/POE/poe-raven-702.txt")
+text = page.read()
+text = text.decode()
+page.close()
+file = open("raven.txt", "w")
+file.write(text)
+file.close()
+
+file = file.split()
+book = {}
+for word in file:
+    if word not in book:
+        book[word] = 1
+    else:
+        book[word] += 1
+def last(x):
+    return x[-1]
+book = book.items()
+sort_book = sorted(book,key=last,reverse=True)
+for i in sort_book[:10]:
+    print(i[0], ":", i[1])

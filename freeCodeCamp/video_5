@@ -1,0 +1,40 @@
+## Video Five
+def factorial(x):
+    total = 1
+    while x > 0:
+        total *= x
+        x -= 1
+    print(total)
+
+def factorial(x):
+    if x > -1:
+        if x == 0:
+            return 1
+        else:
+            return x  * factorial(x-1)
+    else:
+        return "Negative"
+tests = [3,4,1,0,-2,8,12,18,100]
+for test in tests:
+    print(factorial(test))
+
+def odds(balls,pick,power=False):
+    """Enter number a regular balls, number of balls
+picked, and if they are using a powerball, you will be asked
+for the number of powerballs"""
+    from math import factorial as fact
+    p_ball = 1
+    if power:
+        p_ball = int(input("Enter the number of powerballs: "))
+    return (fact(balls))//(fact(5)*fact(balls-pick))*p_ball
+print("{:,}".format(odds(69,6)))
+#or to print commas with f-string, do print(f"{odds(69,6):,}")
+
+d = {}
+d["Tobio"] = 16
+fruits = {"bananasc":3, "apple": 1, "grapes": 2}
+##print(fruits.keys())
+##print(fruits.values())
+##print(fruits.items())
+for k,v in fruits.items():
+    print(f"I have {v} {k}")
